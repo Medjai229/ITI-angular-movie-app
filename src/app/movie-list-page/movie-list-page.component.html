@@ -1,0 +1,13 @@
+<div class="movies-container">
+  <div class="movie" *ngFor="let movie of movies">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.overview }}</p>
+  </div>
+</div>
+
+<app-pagination
+  [totalPages]="totalPages"
+  [currentPage]="currentPage"
+  (pageChange)="onPageChange($event)"
+>
+</app-pagination>
