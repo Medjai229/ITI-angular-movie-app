@@ -1,0 +1,18 @@
+.movie-image img {
+  border-radius: 22px;
+  width: 100%;
+}
+
+.movie-date {
+  font-size: 14px;
+}
+
+.wish {
+  border: none;
+  background-color: #ffffff;
+}
+
+.category {
+  background-color: #FFE353;
+  width: fit-content;
+}
