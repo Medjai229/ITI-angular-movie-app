@@ -22,11 +22,11 @@ export const routes: Routes = [
   },
 
   {
-    path: 'movie-details/:id',
+    path: 'movie/:id',
 
     component: MovieDetailsPageComponent,
 
-    title: 'Details',
+    title: 'Movie',
   },
   {
     path: 'search',
