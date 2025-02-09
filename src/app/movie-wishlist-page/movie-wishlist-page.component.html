@@ -1,1 +1,33 @@
-<p>movie-wishlist-page works!</p>
+<div class="container mt-4 wishlist-page">
+    <h1 class="mb-4 text-center">WishList</h1>
+  
+    @if (wishlist.length > 0) {
+      <div class="row gy-4">
+        @for (movie of wishlist; track movie.id) {
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <img
+                [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+                class="card-img-top"
+                alt="{{ movie.title }}"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <p class="text-muted">{{ movie.release_date }}</p>
+                <button (click)="removeFromWishlist(movie.id)" class="btn btn-danger">
+                  Remove from Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="text-center mt-5">
+        <i class="fas fa-heart-broken fa-5x text-danger"></i>
+        <p class="lead mt-3">No Movies in wishlist.</p>
+        <a routerLink="/" class="btn btn-warning fw-bold">Back to Home</a>
+      </div>
+    }
+  </div>
+  
