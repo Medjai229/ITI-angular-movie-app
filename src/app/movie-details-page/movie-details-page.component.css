@@ -1,0 +1,43 @@
+.row.details {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.movie-image img {
+  border-radius: 22px;
+  /* height: 600px; */
+}
+
+.movie-date {
+  font-size: 14px;
+}
+
+.wish {
+  border: none;
+  background-color: #ffffff;
+}
+
+.movie-description {
+  width: 90%;
+}
+
+.category {
+  background-color: #FFE353;
+  width: fit-content;
+  border-radius: 30px;
+  padding: 4px 25px;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 220px;
+}
+
+.web-link {
+  padding: 5px 15px;
+  border: 1px solid #FFE353;
+  width: fit-content;
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+}

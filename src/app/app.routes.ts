@@ -29,6 +29,4 @@ export const routes: Routes = [
 
        , title:"Details"
     }
-     
-
 ];
