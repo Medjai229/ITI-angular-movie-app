@@ -5,7 +5,6 @@
 
 .movie-image img {
   border-radius: 22px;
-  /* height: 600px; */
 }
 
 .movie-date {
@@ -40,6 +39,7 @@
 .duration-lang {
   flex-wrap: wrap;
 }
+
 
 @media (max-width:768px) {
   .duration-lang {
