@@ -1,0 +1,39 @@
+.pagination-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-page {
+  border: 1px solid #ccc;
+}
+
+button.active {
+  background-color: #ffd700; /* اللون الأصفر */
+  font-weight: bold;
+  border: 1px solid #ffd700;
+}
+
+.pagination-arrow {
+  font-weight: bold;
+}
