@@ -23,7 +23,13 @@
             <p class="movie-date text-secondary mb-0">{{movie.release_date | date : "mediumDate"}}</p>
 
             <div class="Rating d-flex gap-3 align-items-center mt-4">
-              <div class="stars fs-4">{{movie.vote_average | rating}}</div>
+
+              <div class="stars fs-4">
+                @for (star of generateStars(movie.vote_average); track $index) {
+                  <i [class]="star"></i>
+                }
+                
+              </div>
               <div class="vote-count">{{movie.vote_count}}</div>
             </div>
 
@@ -52,7 +58,11 @@
             </div>
 
             <div class="website mt-4">
-              <a class="d-flex gap-2 align-items-center web-link" [href]="movie.homepage" target="_blank">Website<i class="fa-solid fa-link"></i></a>
+              @if(movie.homepage){
+                <a class="d-flex gap-2 align-items-center web-link" [href]="movie.homepage" target="_blank">Website<i class="fa-solid fa-link"></i></a>
+              }@else {
+                Sorry, the website is currently unavailable!
+              }
             </div>
 
           </div>

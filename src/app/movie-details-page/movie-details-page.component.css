@@ -53,7 +53,7 @@
 }
 
 .logo img {
-  width: 220px;
+  width: 100px;
 }
 
 .web-link {
@@ -63,4 +63,14 @@
   color: black;
   text-decoration: none;
   border-radius: 25px;
+  transition: 0.3s;
+}
+
+.web-link:hover {
+  background-color: #FFE353;
+}
+
+.stars i {
+  color: gold;
+  margin-right: 4px;
 }

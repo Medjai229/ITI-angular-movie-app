@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from '../services/request.service';
 import { DatePipe } from '@angular/common';
-import { RatingPipe } from '../pipes/rating.pipe';
+
 
 @Component({
   selector: 'app-movie-details-page',
-  imports: [DatePipe, RatingPipe],
+  imports: [DatePipe],
   templateUrl: './movie-details-page.component.html',
   styleUrl: './movie-details-page.component.css'
 })
@@ -42,8 +42,35 @@ export class MovieDetailsPageComponent {
       this.movie = res
 
       console.log(this.movie)
-
     })
-
   }
+
+
+  generateStars(rating: number): string[] {
+    const stars = [];
+
+
+    const ratingOutOfFive = (rating / 10) * 5;
+
+    const fullStars = Math.floor(ratingOutOfFive);
+    const halfStar = (ratingOutOfFive - fullStars) >= 0.5;
+    const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push('fa-solid fa-star');
+    }
+
+    if (halfStar) {
+      stars.push('fa-solid fa-star-half-stroke');
+    }
+
+
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push('fa-regular fa-star');
+    }
+
+    return stars;
+  }
+
 }
