@@ -1,1 +1,24 @@
-<p>movie-card works!</p>
+<div class="card border-0">
+  <div>
+    <img
+      [src]="getPoster(movie)"
+      class="card-img rounded-4"
+      alt="Movie Poster"
+      (error)="handlePosterErr($event)"
+    />
+    <span
+      class="badge position-absolute start-0 m-2"
+      [ngClass]="movie.vote_average < 7 ? 'text-bg-warning' : 'text-bg-success'"
+      >{{ movie.vote_average | number : "1.1-1" }}/10</span
+    >
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{ movie.title }}</h3>
+    <div class="d-flex justify-content-between">
+      <p class="card-text my-auto">
+        {{ movie.release_date | date : "mediumDate" }}
+      </p>
+      <a><i class="fa-regular fa-heart text-warning h4 my-auto"></i></a>
+    </div>
+  </div>
+</div>
