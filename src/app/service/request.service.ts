@@ -9,9 +9,9 @@ export class RequestService {
   api: string = '6a1cabb5e93fd6605356ead9aa9712dd';
   constructor(private http: HttpClient) {}
 
-  getSearchResults(search: string): any {
+  getSearchResults(search: string, page: number): any {
     return this.http.get(
-      `${this.url}search/movie?api_key=${this.api}&query=${search}`
+      `${this.url}search/movie?api_key=${this.api}&query=${search}&page=${page}`
     );
   }
 

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="d-flex my-4">
     <input
-      [(ngModel)]="searchQuery"
+      [(ngModel)]="searchData"
       class="form-control me-2"
       type="search"
       placeholder="Search..."
@@ -27,4 +27,11 @@
     }
   </div>
   }
+
+  <app-pagination
+    [totalPages]="totalPages"
+    [currentPage]="currentPage"
+    (pageChange)="onPageChange($event)"
+  >
+  </app-pagination>
 </div>

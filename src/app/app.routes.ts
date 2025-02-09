@@ -2,31 +2,37 @@ import { Routes } from '@angular/router';
 import { MovieListPageComponent } from './movie-list-page/movie-list-page.component';
 import { MovieWishlistPageComponent } from './movie-wishlist-page/movie-wishlist-page.component';
 import { MovieDetailsPageComponent } from './movie-details-page/movie-details-page.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 export const routes: Routes = [
+  {
+    path: '',
 
+    component: MovieListPageComponent,
 
-    {
-        path:""
+    title: 'Home',
+  },
 
-        , component:MovieListPageComponent
+  {
+    path: 'watch-list',
 
-       , title:"Home"
-    },
+    component: MovieWishlistPageComponent,
 
-    {
-        path:"watch-list"
+    title: 'Watch-list',
+  },
 
-        , component:MovieWishlistPageComponent
+  {
+    path: 'movie-details/:id',
 
-       , title:"Watch-list"
-    },
-    
-    {
-        path:"movie-details/:id"
+    component: MovieDetailsPageComponent,
 
-        , component:MovieDetailsPageComponent
+    title: 'Details',
+  },
+  {
+    path: 'search',
 
-       , title:"Details"
-    }
+    component: SearchPageComponent,
+
+    title: 'Search',
+  },
 ];
