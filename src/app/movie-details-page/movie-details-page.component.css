@@ -20,6 +20,9 @@
 .movie-description {
   width: 90%;
 }
+.movie-description p {
+  text-align: justify;
+}
 
 .movie-categories {
   flex-wrap: wrap;
@@ -43,6 +46,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px !important;
+  }
+  .movie-description {
+    width: 100%;
   }
 }
 
