@@ -23,7 +23,7 @@
             <p class="movie-date text-secondary mb-0">{{movie.release_date | date : "mediumDate"}}</p>
 
             <div class="Rating d-flex gap-3 align-items-center mt-4">
-              <div class="stars fs-4">⭐⭐⭐⭐⭐</div>
+              <div class="stars fs-4">{{movie.vote_average | rating}}</div>
               <div class="vote-count">{{movie.vote_count}}</div>
             </div>
 

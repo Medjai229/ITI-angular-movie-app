@@ -2,10 +2,11 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from '../services/request.service';
 import { DatePipe } from '@angular/common';
+import { RatingPipe } from '../pipes/rating.pipe';
 
 @Component({
   selector: 'app-movie-details-page',
-  imports: [DatePipe],
+  imports: [DatePipe, RatingPipe],
   templateUrl: './movie-details-page.component.html',
   styleUrl: './movie-details-page.component.css'
 })
