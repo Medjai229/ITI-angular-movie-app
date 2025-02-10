@@ -1,14 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RequestService } from '../services/request.service';
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgClass } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
+import { WishlistService } from '../services/wishlist.service';
 
 
 @Component({
   selector: 'app-movie-details-page',
-  imports: [DatePipe, MovieCardComponent],
+  imports: [DatePipe, MovieCardComponent, NgClass],
   templateUrl: './movie-details-page.component.html',
   styleUrl: './movie-details-page.component.css'
 })
@@ -17,7 +18,7 @@ export class MovieDetailsPageComponent {
   movie: any
   recommendations: any[] = []
 
-  constructor(private RequestService: RequestService, private route: ActivatedRoute, private router : Router, private titleService: Title){}
+  constructor(private RequestService: RequestService, private route: ActivatedRoute, private wishListService: WishlistService ,private titleService: Title){}
 
 
   getPoster(movie: any) {
@@ -54,6 +55,18 @@ export class MovieDetailsPageComponent {
     this.titleService.setTitle(newTitle);
   }
 
+
+  toggleWishList() {
+    if (this.isWishListed()) {
+      this.wishListService.removeFromWishlist(this.movie.id)
+    }else {
+      this.wishListService.addToWishlist(this.movie)
+    }
+  }
+
+  isWishListed(): boolean {
+    return this.wishListService.isInWishlist(this.movie.id);
+  }
 
   // Handel Rating
 
