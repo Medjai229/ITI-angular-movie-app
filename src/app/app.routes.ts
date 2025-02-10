@@ -10,7 +10,7 @@ export const routes: Routes = [
 
     component: MovieListPageComponent,
 
-    title: 'Home',
+    title: 'Home | Movie Best',
   },
 
   {

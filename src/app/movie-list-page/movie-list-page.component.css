@@ -1,53 +1,54 @@
+#search {
+  height: 600px;
 
-#search{
+  background-image: url("/assets/images/1191374.jpg");
 
-height:600px ;
+  background-repeat: no-repeat;
 
-background-image: url('/assets/images/1191374.jpg');
+  background-size: cover;
 
-background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
 
-
-/* background-size: cover; */
-
-background-size: 100%;
+  /* background-size: 100%; */
 }
 
-#searchbtn{
-
-background-color: #ffe353;
-color: #222B31;
-border: none;
-font-weight: 400;
-font-size: 30px;
-
+.overlay {
+  position: absolute;
+  content: '';
+  background-color: black;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-
-
-h2{
-
-font-weight: 800;
-
-
-font-size: 70px;
-
-color: aliceblue;
-
+#searchbtn {
+  background-color: #ffe353;
+  color: #222b31;
+  border: none;
+  font-weight: 400;
+  font-size: 30px;
 }
 
+h2 {
+  font-weight: 800;
 
-h5{
-    font-weight: 800;
+  font-size: 70px;
 
-    color: aliceblue;
+  color: aliceblue;
 }
 
-#form{
+h5 {
+  font-weight: 800;
 
-    font-weight: 600;
-    height: 55px;
-    color: rgb(255, 255, 255);
-    opacity: 75%;
-background-color: #222B31;
+  color: aliceblue;
+}
+
+#form {
+  font-weight: 600;
+  height: 55px;
+  color: rgb(255, 255, 255);
+  opacity: 75%;
+  background-color: #222b31;
 }

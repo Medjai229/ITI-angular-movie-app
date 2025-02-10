@@ -1,28 +1,28 @@
 .filled-heart {
     color: #e21919; /* Pink for filled heart */
   }
-  
+
   .empty-heart {
     color: gray; /* Gray for unfilled heart */
   }
-  
+
   .wishlist-btn {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 24px;
   }
-  
+
   .wishlist-btn i:hover {
     color: #eb2107; /* Add hover effect */
   }
-  
+
   #theCard{
     color: aliceblue;
 
     background-color: #384f5e;
 
-    border-radius: 0  0 25px 25px;
+    border-radius: 10px;
   }
 
   #theitem{
@@ -37,7 +37,6 @@
 
   #theitem:hover {
     transform: scale(1.05);
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 

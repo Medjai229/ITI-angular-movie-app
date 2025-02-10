@@ -2,7 +2,7 @@
   <div class="position-relative">
     <img
       [src]="getPoster(movie)"
-      class="card-img rounded-4"
+      class="card-img"
       alt="Movie Poster"
       (error)="handlePosterErr($event)"
       routerLink="/movie/{{ movie.id }}"
