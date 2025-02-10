@@ -52,9 +52,27 @@
   }
 }
 
-.logo img {
-  width: 100px;
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
 }
+
+.logo img {
+  width: 80px;
+  transition: 0.3s;
+  cursor: pointer;
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+
 
 .web-link {
   padding: 5px 15px;

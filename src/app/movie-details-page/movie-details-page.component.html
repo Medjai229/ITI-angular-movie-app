@@ -28,7 +28,7 @@
                 @for (star of generateStars(movie.vote_average); track $index) {
                   <i [class]="star"></i>
                 }
-                
+
               </div>
               <div class="vote-count">{{movie.vote_count}}</div>
             </div>
@@ -54,7 +54,11 @@
             </div>
 
             <div class="logo mt-3">
-              <img [src]="getLogo(movie)" alt="">
+              @for (company of movie.production_companies; track $index) {
+                @if (company.logo_path) {
+                  <img [src]="'https://image.tmdb.org/t/p/w200' + company.logo_path" [alt]="company.name" class="company-logo">
+                }
+              }
             </div>
 
             <div class="website mt-4">

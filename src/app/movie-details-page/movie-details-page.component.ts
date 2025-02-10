@@ -29,9 +29,6 @@ export class MovieDetailsPageComponent {
   }
 
 
-  ngOnChange() {
-    console.log(this.route.snapshot.params["id"])
-  }
 
 
   ngOnInit() {
