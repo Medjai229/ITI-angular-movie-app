@@ -26,7 +26,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'wishist',
+    path: 'wishlist',
 
     component: MovieWishlistPageComponent,
 
