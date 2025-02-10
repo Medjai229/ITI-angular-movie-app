@@ -26,7 +26,10 @@
       <p class="card-text my-auto">
         {{ movie.release_date | date : "mediumDate" }}
       </p>
-      <a><i class="fa-regular fa-heart text-warning h4 my-auto"></i></a>
-    </div>
+   <!-- Wishlist Toggle Button -->
+   <button (click)="toggleWishlist()" class="wishlist-btn">
+    <i [ngClass]="isWishlisted() ? 'fas fa-heart filled-heart' : 'far fa-heart empty-heart'"></i>
+  </button>
+</div>
   </div>
 </div>

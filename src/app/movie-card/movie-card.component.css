@@ -1,0 +1,19 @@
+.filled-heart {
+    color: #ff4081; /* Pink for filled heart */
+  }
+  
+  .empty-heart {
+    color: gray; /* Gray for unfilled heart */
+  }
+  
+  .wishlist-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .wishlist-btn i:hover {
+    color: #eb2107; /* Add hover effect */
+  }
+  
