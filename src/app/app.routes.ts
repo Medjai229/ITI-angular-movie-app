@@ -20,6 +20,12 @@ export const routes: Routes = [
   },
 
   {
+    path: 'search/:search/:page',
+    component: SearchPageComponent,
+    title: 'Search',
+  },
+
+  {
     path: 'wishist',
 
     component: MovieWishlistPageComponent,
