@@ -13,8 +13,7 @@ import { MovieCardComponent } from '../movie-card/movie-card.component';
   styleUrl: './movie-details-page.component.css'
 })
 export class MovieDetailsPageComponent {
-  @Input() id : string = '';
-
+  id: string = '';
   movie: any
   recommendations: any[] = []
 
@@ -32,27 +31,20 @@ export class MovieDetailsPageComponent {
 
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id']
-    console.log(this.id)
+    this.route.params.subscribe((params) => {
+      this.id = params['id'];
 
-    this.RequestService.getMovieDetails(this.id).subscribe((res)=> {
-      this.movie = res
-
-      this.setTitle(this.movie.title)
-
-    })
-
-    if (this.movie) {
-      this.setTitle(this.movie.title);
-    }
+      this.RequestService.getMovieDetails(this.id).subscribe((res) => {
+        this.movie = res;
+        this.setTitle(this.movie.title);
+      });
+    });
 
     //Recommentations
 
-    this.RequestService.getRecommendations(this.id).subscribe((res)=> {
-      this.recommendations = res.results
-      console.log(this.recommendations)
-    })
-
+    this.RequestService.getRecommendations(this.id).subscribe((res) => {
+      this.recommendations = res.results;
+    });
   }
 
 
@@ -63,19 +55,16 @@ export class MovieDetailsPageComponent {
   }
 
 
-
   // Handel Rating
 
   generateStars(rating: number): string[] {
     const stars = [];
-
 
     const ratingOutOfFive = (rating / 10) * 5;
 
     const fullStars = Math.floor(ratingOutOfFive);
     const halfStar = (ratingOutOfFive - fullStars) >= 0.5;
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-
 
     for (let i = 0; i < fullStars; i++) {
       stars.push('fa-solid fa-star');
