@@ -14,11 +14,17 @@ export const routes: Routes = [
   },
 
   {
-    path: 'watch-list',
+    path: 'search',
+    component: SearchPageComponent,
+    title: 'Search',
+  },
+
+  {
+    path: 'wishist',
 
     component: MovieWishlistPageComponent,
 
-    title: 'Watch-list',
+    title: 'Wishlist',
   },
 
   {
@@ -26,13 +32,6 @@ export const routes: Routes = [
 
     component: MovieDetailsPageComponent,
 
-    title: 'Movie',
-  },
-  {
-    path: 'search',
-
-    component: SearchPageComponent,
-
-    title: 'Search',
+    title: 'Details',
   },
 ];
