@@ -1,25 +1,28 @@
 <nav class="navbar bg-body-warning">
-    <div class="container-fluid mx-5">
-      <a routerLink="/"  class="navbar-brand">Movie app</a>
-      <form class="d-flex" role="search">
-      
+  <div class="container-fluid mx-5">
+    <a routerLink="/" class="navbar-brand">Movie app</a>
+    <form class="d-flex" role="search">
       <div class="btn-group mx-3">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
           EN
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
-          <li><hr class="dropdown-divider"></li>
+          <li><hr class="dropdown-divider" /></li>
           <li><a class="dropdown-item" href="#">Separated link</a></li>
         </ul>
       </div>
-      
 
-      <a routerLink="/watch-list" class="navbar-brand" ><i class="fa-solid fa-heart"></i></a>
-      <a routerLink="/watch-list" class="navbar-brand">Watchlist</a>
-
-      </form>
-    </div>
-  </nav>
+      <a routerLink="/wishlist" class="navbar-brand"
+      ></a>
+      <a routerLink="/wishlist" class="navbar-brand"> ❤️ Wishlist <span class="badge bg-danger ">{{ wishlistCount }}</span></a>
+    </form>
+  </div>
+</nav>
