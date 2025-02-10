@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from '../services/request.service';
 import { DatePipe } from '@angular/common';
 import { Title } from '@angular/platform-browser';
+import { MovieCardComponent } from '../movie-card/movie-card.component';
 
 
 @Component({
   selector: 'app-movie-details-page',
-  imports: [DatePipe],
+  imports: [DatePipe, MovieCardComponent],
   templateUrl: './movie-details-page.component.html',
   styleUrl: './movie-details-page.component.css'
 })
@@ -15,9 +16,9 @@ export class MovieDetailsPageComponent {
   @Input() id : string = '';
 
   movie: any
+  recommendations: any[] = []
 
   constructor(private RequestService: RequestService, private route: ActivatedRoute, private router : Router, private titleService: Title){}
-
 
 
   getPoster(movie: any) {
@@ -30,29 +31,40 @@ export class MovieDetailsPageComponent {
   }
 
 
-
-
   ngOnInit() {
     this.id = this.route.snapshot.params['id']
     console.log(this.id)
 
     this.RequestService.getMovieDetails(this.id).subscribe((res)=> {
       this.movie = res
-      
+
       this.setTitle(this.movie.title)
 
-      console.log(this.movie)
     })
 
     if (this.movie) {
       this.setTitle(this.movie.title);
     }
+
+    //Recommentations
+
+    this.RequestService.getRecommendations(this.id).subscribe((res)=> {
+      this.recommendations = res.results
+      console.log(this.recommendations)
+    })
+
   }
+
+
+  //Handel page title
 
   setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
   }
 
+
+
+  // Handel Rating
 
   generateStars(rating: number): string[] {
     const stars = [];

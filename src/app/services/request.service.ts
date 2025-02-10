@@ -25,6 +25,9 @@ export class RequestService {
     return this.http.get(`${this.url}movie/${id}?api_key=${this.api}`)
   }
 
+  getRecommendations(id: string): Observable<any>{
+    return this.http.get(`${this.url}movie/${id}/recommendations?api_key=${this.api}`)
+  }
 
 }
 
