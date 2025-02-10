@@ -18,6 +18,7 @@ export class MovieListPageComponent {
     private _paginationService: PaginationService,
     private router: Router
   ) {}
+
   movies: any[] = [];
   totalPages: number = 0;
   currentPage: number = 1;
@@ -28,7 +29,7 @@ export class MovieListPageComponent {
   }
 
   loadMovies(page: number): void {
-    this._paginationService.fetchPageData(page).subscribe((data) => {
+      this._paginationService.fetchPageData(page).subscribe((data) => {
       this.movies = data.results;
       this.totalPages = data.total_pages;
       this.currentPage = page;

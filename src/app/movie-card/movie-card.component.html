@@ -1,4 +1,4 @@
-<div class="card border-0">
+<div id="theitem" class="card border-0">
   <div>
     <img
       [src]="getPoster(movie)"
@@ -14,16 +14,17 @@
       >{{ movie.vote_average | number : "1.1-1" }}/10</span
     >
   </div>
-  <div class="card-body">
+  <div id="theCard" class="card-body ">
     <h3
-      class="card-title fs-5"
+    id="title"
+      class="card-title"
       routerLink="/movie/{{ movie.id }}"
       style="cursor: pointer"
     >
       {{ movie.title }}
     </h3>
     <div class="d-flex justify-content-between">
-      <p class="card-text my-auto">
+      <p  class="card-text my-auto">
         {{ movie.release_date | date : "mediumDate" }}
       </p>
    <!-- Wishlist Toggle Button -->
