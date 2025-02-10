@@ -1,5 +1,5 @@
 <div id="theitem" class="card border-0">
-  <div>
+  <div class="position-relative">
     <img
       [src]="getPoster(movie)"
       class="card-img rounded-4"
@@ -8,15 +8,16 @@
       routerLink="/movie/{{ movie.id }}"
       style="cursor: pointer"
     />
-    <span
-      class="badge position-absolute start-0 m-2"
-      [ngClass]="movie.vote_average < 7 ? 'text-bg-warning' : 'text-bg-success'"
-      >{{ movie.vote_average | number : "1.1-1" }}/10</span
+    <app-rating-circle
+      class="position-absolute"
+      style="left: 77%; top: 91%"
+      [percent]="movieRatingPercent(movie)"
     >
+    </app-rating-circle>
   </div>
-  <div id="theCard" class="card-body ">
+  <div id="theCard" class="card-body">
     <h3
-    id="title"
+      id="title"
       class="card-title"
       routerLink="/movie/{{ movie.id }}"
       style="cursor: pointer"
@@ -24,13 +25,19 @@
       {{ movie.title }}
     </h3>
     <div class="d-flex justify-content-between">
-      <p  class="card-text my-auto">
+      <p class="card-text my-auto">
         {{ movie.release_date | date : "mediumDate" }}
       </p>
-   <!-- Wishlist Toggle Button -->
-   <button (click)="toggleWishlist()" class="wishlist-btn">
-    <i [ngClass]="isWishlisted() ? 'fas fa-heart filled-heart' : 'far fa-heart empty-heart'"></i>
-  </button>
-</div>
+      <!-- Wishlist Toggle Button -->
+      <button (click)="toggleWishlist()" class="wishlist-btn">
+        <i
+          [ngClass]="
+            isWishlisted()
+              ? 'fas fa-heart filled-heart'
+              : 'far fa-heart empty-heart'
+          "
+        ></i>
+      </button>
+    </div>
   </div>
 </div>
