@@ -35,11 +35,9 @@
   font-size: 20px;
 }
 
-
 .duration-lang {
   flex-wrap: wrap;
 }
-
 
 @media (max-width:768px) {
   .duration-lang {
@@ -71,8 +69,6 @@
 .logo img:hover {
   transform: scale(1.1);
 }
-
-
 
 .web-link {
   padding: 5px 15px;

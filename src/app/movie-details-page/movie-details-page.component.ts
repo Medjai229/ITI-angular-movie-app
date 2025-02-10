@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from '../services/request.service';
 import { DatePipe } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class MovieDetailsPageComponent {
 
   movie: any
 
-  constructor(private RequestService: RequestService, private route: ActivatedRoute, private router : Router){}
+  constructor(private RequestService: RequestService, private route: ActivatedRoute, private router : Router, private titleService: Title){}
 
 
 
@@ -37,9 +38,19 @@ export class MovieDetailsPageComponent {
 
     this.RequestService.getMovieDetails(this.id).subscribe((res)=> {
       this.movie = res
+      
+      this.setTitle(this.movie.title)
 
       console.log(this.movie)
     })
+
+    if (this.movie) {
+      this.setTitle(this.movie.title);
+    }
+  }
+
+  setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
 
