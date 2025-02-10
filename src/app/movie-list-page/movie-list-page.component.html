@@ -2,6 +2,19 @@
   <div class="item">
     <h2>Welcome to our movie app</h2>
     <h5>Millions of movies, TV shows and people to discover. Explore now.</h5>
+    <div class="d-flex my-4">
+      <input
+        [(ngModel)]="searchData"
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+        (keydown.enter)="search()"
+      />
+      <button type="submit" class="btn btn-primary col-1" (click)="search()">
+        Search
+      </button>
+    </div>
   </div>
 </div>
 
