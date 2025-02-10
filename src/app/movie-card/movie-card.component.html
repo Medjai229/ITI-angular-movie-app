@@ -5,6 +5,8 @@
       class="card-img rounded-4"
       alt="Movie Poster"
       (error)="handlePosterErr($event)"
+      routerLink="/movie/{{ movie.id }}"
+      style="cursor: pointer"
     />
     <span
       class="badge position-absolute start-0 m-2"
@@ -13,7 +15,13 @@
     >
   </div>
   <div class="card-body">
-    <h3 class="card-title fs-5">{{ movie.title }}</h3>
+    <h3
+      class="card-title fs-5"
+      routerLink="/movie/{{ movie.id }}"
+      style="cursor: pointer"
+    >
+      {{ movie.title }}
+    </h3>
     <div class="d-flex justify-content-between">
       <p class="card-text my-auto">
         {{ movie.release_date | date : "mediumDate" }}
