@@ -14,10 +14,13 @@
               />
               <div class="card-body text-center">
                 <h5 class="card-title">{{ movie.title }}</h5>
-                <p class="text-muted">{{ movie.release_date }}</p>
-                <button (click)="removeFromWishlist(movie.id)" class="btn btn-danger">
-                  Remove Movie
+                <p class="text-muted">{{ movie.release_date | date:"mediumDate"}}</p>
+                <button (click)="removeFromWishlist(movie.id)" class="btn btn-outline-danger">
+                  <i class="fa-solid fa-trash"></i> Remove
                 </button>
+                
+                
+                
               </div>
             </div>
           </div>
