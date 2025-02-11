@@ -27,11 +27,11 @@ export const routes: Routes = [
   },
 
   {
-    path: 'wishlist',
+    path: 'watchlist',
 
     component: MovieWishlistPageComponent,
 
-    title: 'Wishlist',
+    title: 'Watch List',
   },
 
   {
