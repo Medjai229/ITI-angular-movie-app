@@ -69,7 +69,9 @@
 
   <div class="row m-5">
     @for (movie of searchResults; track $index) {
-    <app-movie-card [movie]="movie" class="col-2 mb-5"></app-movie-card>
+    <div class="col-sm-12 col-md-6 col-lg-2 my-4">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
     }
   </div>
   }
