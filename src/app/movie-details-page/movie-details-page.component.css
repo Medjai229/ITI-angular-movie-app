@@ -1,7 +1,11 @@
 .row.details {
   padding-bottom: 40px;
-  border-bottom: 1px solid #cccccc35;
+  background-color: #384f5e4c;
+  padding: 20px;
+  border-radius: 10px;
   color: #fff;
+  position: relative;
+  z-index: 999;
 }
 
 .movie-image img {
@@ -15,7 +19,7 @@
 
 .wish {
   border: none;
-  background-color: #222B31;
+  background-color: transparent;
   color: #ffffff;
 }
 
@@ -114,3 +118,14 @@ border-radius: 30px;
   font-weight: normal;
 }
 
+.backdrop-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

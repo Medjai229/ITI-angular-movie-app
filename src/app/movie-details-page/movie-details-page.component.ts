@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RequestService } from '../services/request.service';
-import { DatePipe, NgClass } from '@angular/common';
+import { CommonModule, DatePipe, NgClass } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { WishlistService } from '../services/wishlist.service';
@@ -9,7 +9,7 @@ import { WishlistService } from '../services/wishlist.service';
 
 @Component({
   selector: 'app-movie-details-page',
-  imports: [DatePipe, MovieCardComponent, NgClass],
+  imports: [DatePipe, MovieCardComponent, NgClass, CommonModule],
   templateUrl: './movie-details-page.component.html',
   styleUrl: './movie-details-page.component.css'
 })
@@ -30,6 +30,9 @@ export class MovieDetailsPageComponent {
     return `https://image.tmdb.org/t/p/w200/${movie.production_companies[0].logo_path}`;
   }
 
+  getBackdrop(movie: any) {
+    return `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+  }
 
   ngOnInit() {
     this.route.params.subscribe((params) => {

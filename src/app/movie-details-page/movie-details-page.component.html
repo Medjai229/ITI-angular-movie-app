@@ -1,8 +1,9 @@
 <div class="movie-details mt-5">
+
   <div class="m-5">
     @if (movie) {
-      <div class="row details">
-
+      <div class="row details" [ngStyle]="{'background-image': 'url(' + getBackdrop(movie) + ')', 'background-size': 'cover', 'background-position': 'center'}">
+        <div class="backdrop-overlay"></div>
 
         <div class="col col-sm-12 col-lg-4">
           <div class="movie-image">
