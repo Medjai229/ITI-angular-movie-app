@@ -3,6 +3,7 @@ import { MovieListPageComponent } from './movie-list-page/movie-list-page.compon
 import { MovieWishlistPageComponent } from './movie-wishlist-page/movie-wishlist-page.component';
 import { MovieDetailsPageComponent } from './movie-details-page/movie-details-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -39,5 +40,11 @@ export const routes: Routes = [
     component: MovieDetailsPageComponent,
 
     title: 'Details',
+  },
+
+  {
+    path: '**',
+    component: NotFoundComponent,
+    title: 'Not Found',
   },
 ];
