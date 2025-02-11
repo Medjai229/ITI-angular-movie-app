@@ -66,3 +66,59 @@ h5 {
 #form::placeholder {
   color: white;
 }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 65px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  #form {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  #searchbtn {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .item {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  h5 {
+    font-size: 17px;
+  }
+
+  #form {
+    height: 45px;
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  #searchbtn {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+
+  #search {
+    height: 550px;
+    background-size: cover;
+
+  
+     /* background-size: 135%;  */
+  }
+
+  
+}
