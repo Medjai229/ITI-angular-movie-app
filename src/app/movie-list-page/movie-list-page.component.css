@@ -89,6 +89,31 @@ h5 {
 }
 
 
+
+@media (max-width: 610px) {
+  h2 {
+    font-size: 60px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  #form {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  #searchbtn {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+}
+
+
+
+
+
 @media (max-width: 576px) {
   .item {
     text-align: left;
