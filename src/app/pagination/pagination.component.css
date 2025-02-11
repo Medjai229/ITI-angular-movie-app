@@ -15,10 +15,6 @@ button {
   transition: background 0.3s;
 }
 
-button:hover:not(:disabled) {
-  background-color: #f0f0f0;
-}
-
 button:disabled {
   color: #ccc;
   cursor: not-allowed;
@@ -29,11 +25,17 @@ button:disabled {
 }
 
 button.active {
-  background-color: #ffd700; /* اللون الأصفر */
+  background-color: #ffd700;
   font-weight: bold;
   border: 1px solid #ffd700;
 }
 
 .pagination-arrow {
   font-weight: bold;
+  color: black;
+}
+
+.colo {
+  color: black;
+  background-color: white;
 }
