@@ -17,12 +17,6 @@ export class PaginationComponent {
 
   constructor(private paginationService: PaginationService) {}
 
-  ngOnInit(): void {
-    this.paginationService.fetchPageData(1).subscribe((data) => {
-      this.totalPages = data.totalPages;
-    });
-  }
-
   updateVisiblePages(): void {
     this.visiblePages = this.paginationService.getVisiblePages(
       this.totalPages,
