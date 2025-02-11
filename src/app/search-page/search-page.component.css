@@ -1,0 +1,19 @@
+#form {
+  font-weight: 600;
+  height: 55px;
+  color: rgb(255, 255, 255);
+  opacity: 75%;
+  background-color: #222b31;
+}
+
+#searchbtn {
+  background-color: #ffe353;
+  color: #222b31;
+  border: none;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#form::placeholder {
+  color: white;
+}
