@@ -1,8 +1,9 @@
 <nav class="navbar bg-body-warning">
   <div class="container-fluid mx-5">
-    <a routerLink="/" class="navbar-brand">Movie app</a>
+    <a routerLink="/" class="navbar-brand">Movie Best</a>
     <form class="d-flex" role="search">
-      <div class="btn-group mx-3">
+      <!-- commented the Language button -->
+      <!-- <div class="btn-group mx-3">
         <button
           type="button"
           class="btn btn-primary dropdown-toggle"
@@ -18,11 +19,14 @@
           <li><hr class="dropdown-divider" /></li>
           <li><a class="dropdown-item" href="#">Separated link</a></li>
         </ul>
-      </div>
+      </div> -->
 
       <a routerLink="/wishlist" class="navbar-brand"
       ></a>
-      <a routerLink="/wishlist" class="navbar-brand"> ❤️ Wishlist <span class="badge bg-danger ">{{ wishlistCount }}</span></a>
+      <a routerLink="/wishlist" class="navbar-brand">
+        <i class="fa-solid fa-video"></i> <!-- Solid movie camera -->
+ My List <span class="badge custom-badge">
+ {{ wishlistCount }}</span></a>
     </form>
   </div>
 </nav>
