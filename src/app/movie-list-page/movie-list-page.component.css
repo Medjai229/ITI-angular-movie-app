@@ -112,8 +112,6 @@ h5 {
 
 
 
-
-
 @media (max-width: 576px) {
   .item {
     text-align: left;
@@ -143,8 +141,112 @@ h5 {
     background-size: cover;
 
   
-     /* background-size: 135%;  */
   }
 
   
+@media (max-width: 512px) {
+  .item {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 44px;
+  }
+
+  h5 {
+    font-size: 17px;
+  }
+
+  #form {
+    height: 45px;
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  #searchbtn {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+
+  #search {
+    height: 550px;
+    background-size: cover;
+
+  
+  }
+
+  
+}
+
+@media (max-width: 475px) {
+  .item {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 39px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+
+  #form {
+    height: 45px;
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  #searchbtn {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+
+  #search {
+    height: 550px;
+    background-size: cover;
+
+  
+  }
+
+  
+}
+
+
+@media (max-width: 400px) {
+  .item {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+
+  #form {
+    height: 45px;
+    font-size: 17px;
+    max-width: 100%;
+    width: 100px;
+  }
+
+  #searchbtn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  #search {
+    height: 550px;
+    background-size: cover;
+
+  
+  }
+
+  
+}
+
+
 }
