@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RequestService } from '../services/request.service';
 import { CommonModule, DatePipe, NgClass } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { WishlistService } from '../service/wishlist.service';
 import { RatingCircleComponent } from '../rating-circle/rating-circle.component';
 import { LanguagePipe } from '../pipe/language.pipe';
+import { RequestService } from '../service/request.service';
 
 @Component({
   selector: 'app-movie-details-page',

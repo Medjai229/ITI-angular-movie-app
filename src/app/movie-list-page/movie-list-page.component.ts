@@ -1,4 +1,4 @@
-import { RequestService } from './../movie-wishlist-page/services/request.service';
+import { RequestService } from '../service/request.service';
 import { Component } from '@angular/core';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { PaginationService } from '../service/pagnation.service';
@@ -29,7 +29,7 @@ export class MovieListPageComponent {
   }
 
   loadMovies(page: number): void {
-      this._paginationService.fetchPageData(page).subscribe((data) => {
+    this._paginationService.fetchPageData(page).subscribe((data) => {
       this.movies = data.results;
       this.totalPages = data.total_pages;
       this.currentPage = page;
