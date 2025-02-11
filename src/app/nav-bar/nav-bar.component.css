@@ -1,3 +1,45 @@
-.navbar {
-  background-color: #ffe353;
+.movie-icon {
+  font-size: 24px;
+  color: #ffcc00; /* Golden color */
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
+
+.movie-icon:hover {
+  color: #ff9900; /* Darker gold on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
+/* New Design for Nav bar */
+.navbar {
+  top: 0;
+  position: sticky;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  
+}
+.navbar-brand {
+    color: white;
+    font-size: 20px;
+  }
+  .navbar-brand:hover{
+    color: #ffe353; 
+  }
+  .navbar-brand:active{
+    color: #eeb12b; 
+  }
+  /* New watch List cssBadge design  */
+.custom-badge {
+  background-color: black;
+  font-size: 19px; 
+  font-weight: bold; 
+  padding: 6px 10px; 
+  border-radius: 999px; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.custom-badge:hover {
+  transform: scale(1.1); 
+  background-color: #c82333; 
+}
+/* //////////////////////////// */
