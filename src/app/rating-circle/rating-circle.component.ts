@@ -28,21 +28,26 @@ export class RatingCircleComponent implements AfterViewInit {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size dynamically
+    // Set canvas size
     canvas.width = this.size;
     canvas.height = this.size;
 
     const darkBackground = '#13181e';
-    const trackColor = '#204529';
-    const barColor = '#21d07a';
-    const lineWidth = this.size * 0.08; // Adjust line thickness based on size
+    let trackColor = '#204529'; //414520 yellow
+    let barColor = '#21d07a'; //c4d021 yellow
+    const lineWidth = this.size * 0.08;
     const radius = this.size / 2 - lineWidth / 2;
     const startAngle = -Math.PI / 2;
     const endAngle = startAngle + 2 * Math.PI * (this.percent / 100);
 
+    if (this.percent < 70) {
+      trackColor = '#414520';
+      barColor = '#c4d021';
+    }
+
     ctx.clearRect(0, 0, this.size, this.size);
 
-    // 🔹 Fill the entire circle with dark background
+    // Fill the entire circle with dark background
     ctx.beginPath();
     ctx.arc(
       this.size / 2,
@@ -54,14 +59,14 @@ export class RatingCircleComponent implements AfterViewInit {
     ctx.fillStyle = darkBackground;
     ctx.fill();
 
-    // 🔹 Draw background track
+    // Draw background track
     ctx.beginPath();
     ctx.arc(this.size / 2, this.size / 2, radius, 0, 2 * Math.PI);
     ctx.strokeStyle = trackColor;
     ctx.lineWidth = lineWidth;
     ctx.stroke();
 
-    // 🔹 Draw progress arc
+    // Draw progress arc
     ctx.beginPath();
     ctx.arc(this.size / 2, this.size / 2, radius, startAngle, endAngle);
     ctx.strokeStyle = barColor;
