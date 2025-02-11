@@ -1,17 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { WishlistService } from '../services/wishlist.service';
+import { WishlistService } from '../service/wishlist.service';
 import { CommonModule, DatePipe } from '@angular/common';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { RouterLink, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-movie-wishlist-page',
-  imports: [
-    CommonModule,
-    MovieCardComponent,
-    RouterModule,
-    DatePipe,
-    RouterLink,
-  ],
+  imports: [CommonModule, RouterModule, DatePipe, RouterLink],
   templateUrl: './movie-wishlist-page.component.html',
   styleUrl: './movie-wishlist-page.component.css',
 })

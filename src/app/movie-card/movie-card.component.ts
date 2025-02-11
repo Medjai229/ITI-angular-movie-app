@@ -1,7 +1,7 @@
 import { DatePipe, NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WishlistService } from '../services/wishlist.service';
+import { WishlistService } from '../service/wishlist.service';
 import { RatingCircleComponent } from '../rating-circle/rating-circle.component';
 
 @Component({

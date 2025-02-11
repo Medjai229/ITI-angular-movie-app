@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WishlistService } from '../services/wishlist.service';
+import { WishlistService } from '../service/wishlist.service';
 
 @Component({
   selector: 'app-nav-bar',
   imports: [RouterLink],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css'
+  styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent implements OnInit {
   wishlistCount = 0;

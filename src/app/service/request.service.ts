@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -9,7 +10,7 @@ export class RequestService {
   api: string = '6a1cabb5e93fd6605356ead9aa9712dd';
   constructor(private http: HttpClient) {}
 
-  getSearchResults(search: string, page: number): any {
+  getSearchResults(search: string, page: number): Observable<any> {
     return this.http.get(
       `${this.url}search/movie?api_key=${this.api}&query=${search}&page=${page}`
     );
